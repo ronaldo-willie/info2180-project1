@@ -1,11 +1,200 @@
 /* Add your CSS to this file */
 body {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans' sans-serif;
+}
+
+header{
+    background-color: white;
+    font-size: 18px;
 }
 
 .container {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav > ul > li{
+    display: block;
+    float: left;
+    padding: 18px;
+    color: #6b7280;
+}
+
+nav a{
+    color: #6b7280;
+}
+
+nav a:hover {
+    color: #5A67D8;
+  }
+
+.overview-hero{
+    background-color: #E2E8F0;
+    padding: 30px;
+}
+
+
+.learn-about h2{
+    font-size: 24px;
+    color: #48BB78;
+}
+
+.learn-about{
+    padding: 30px;
+    margin: 30px;
+}
+
+.learn-about .container{
+    display: flex;
+    flex-direction: column;
+}
+
+section > .container > .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+img{
+    height: 20vh;
+    width: 50%;
+    justify-content: center;
+}
+
+.card h3{
+    color: #48BB78;
+    font-size: 21px;
+}
+
+.card{
+    border: 1px solid#E2E8F0;
+    box-shadow: 5px 5px 10px #E2E8F0;
+    border-radius: 5px;
+    margin: 10px;
+    padding-top: 30px;
+}
+
+.card-body{
+    margin: 10px;
+    padding: 5px;
+}
+
+.testing{
+    padding: 100px 50px;
+    background-color:#4A5568;
+    color: white;
+}
+
+.testing .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.cta{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.cta a{
+    color: whitesmoke;
+    border-radius: 5px;
+    position: relative;
+    background-color: #48BB78;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.stories h2 {
+    color: #5A67D8;
+}
+
+.stories h3{
+    font-size: 18px;
+}
+
+.stories a{
+    color: #5A67D8;
+}
+
+.stories .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.stories .container article {
+    margin: 38px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+article img{
+    height: 20vh;
+    width: 200px;
+    border-radius: 100%;
+    padding-top: 15px;
+}
+
+.article-body{
+    margin: 10px;
+    padding: 10px;
+}
+
+.newsletter{
+    background-color: #48BB78;
+    color: white;
+    padding: 60px;
+}
+
+.newsletter .container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.newsletter form{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 15px 50px;
+    text-align: left;
+    font-size: 16px;
+}
+
+button{
+    background-color: #5A67D8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+footer{
+    background-color: #4A5568;
+    color: white;
+    padding: 30px;
 }
