@@ -1,8 +1,27 @@
 /* Add your JavaScript to this file */
-"use strict";
 
-window.onload = function {Email()};
-/*getElementsByClassName("btn").onclick = function() {Email()};*/
+window.onload = function Email(){
+	const email = document.getElementsById('email')
+	const formData = document.getElementsByTagName('form')
+	const button = document.getElementsByClassName('btn')
+	const messageElement = document.getElementsByClassName('message')
+
+
+	formData.addEventListener('button', (e) => {
+		let message = []
+		if (email.value ==='' || email.value == null) {
+			e.preventDefault();
+			message.push('Email is required')
+		}
+
+		if (message.length > 0){
+			e.preventDefault()
+			messageElement.innerText = message.join(',')
+
+		}
+	})
+}
+/*getElementsByClassName("btn").onclick = function() {Email()};
 getElementsByClassName("btn").addEventListener("click", function(){Email()});
 
 function Email(formData){
@@ -15,4 +34,4 @@ function Email(formData){
 		messageElement.innerHtml = "Email must be filled out, please enter a valid email address";
 		return false;
 	}
-}
+}*/
