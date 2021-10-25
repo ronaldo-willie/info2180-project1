@@ -1,25 +1,28 @@
 /* Add your JavaScript to this file */
 
+
 window.onload = function Email(){
-	const email = document.getElementsById('email')
-	const formData = document.getElementsByTagName('form')
-	const button = document.getElementsByClassName('btn')
-	const messageElement = document.getElementsByClassName('message')
+	let email = document.getElementsByName("email");
+	let formData = document.getElementsByClassName("form-group");
+	let button = document.getElementsByClassName("btn")[0];
+	let messageElement = document.getElementsByClassName("message");
 
 
-	formData.addEventListener('button', (e) => {
-		let message = []
+	button.addEventListener('click', function() {
+		let message = ''
 		if (email.value ==='' || email.value == null) {
 			e.preventDefault();
-			message.push('Email is required')
+			message.push('Email is required');
+			alert('Email is required');
 		}
 
 		if (message.length > 0){
-			e.preventDefault()
-			messageElement.innerText = message.join(',')
+			e.preventDefault();
+			messageElement.innerHtml = "email Submitted";
+			alert('Email Submitted');
 
 		}
-	})
+	});
 }
 /*getElementsByClassName("btn").onclick = function() {Email()};
 getElementsByClassName("btn").addEventListener("click", function(){Email()});
